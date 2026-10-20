@@ -1,0 +1,27 @@
+{
+  "project": "your-project",
+  "sources": {
+    "gsc": {
+      "enabled": false,
+      "site_url": "sc-domain:example.com",
+      "dimensions": ["date", "page"],
+      "search_type": "web",
+      "filter_groups": []
+    },
+    "apple": {
+      "enabled": false,
+      "app_id": "1234567890",
+      "report": "discovery",
+      "timezone": "UTC",
+      "key_id": "",
+      "issuer_id": ""
+    },
+    "play": {
+      "enabled": false,
+      "package_name": "com.example.app",
+      "bucket": "pubsite_prod_rev_example",
+      "breakdown": "country",
+      "timezone": "America/Los_Angeles"
+    }
+  }
+}

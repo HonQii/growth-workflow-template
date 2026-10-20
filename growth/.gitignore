@@ -1,0 +1,10 @@
+# These rules travel with growth/ when it is copied into a product repository.
+.local-data/
+config.local.json
+.venv/
+__pycache__/
+*.py[cod]
+.env
+.env.*
+!.env.example
+*.p8
