@@ -25,6 +25,14 @@ For each metric in use, also specify:
 
 "Users who completed / users who started" is a funnel conversion rate only within the same cohort, sequence, and window. Do not mix it with sitewide event counts. Measure task success by task and user activation by user or account; do not combine them into one metric.
 
+## Definition consistency and observability
+
+Use one canonical definition for each value action across the primary metric, activation, repeated-use audiences, and experiments. Name a different window or proxy explicitly; do not substitute completion-event counts for distinct successful tasks. Preserve historical definitions and thresholds in their records when a definition changes, and label comparisons incompatible until reconciled.
+
+For sequence-based metrics, verify that the source provides the required user/account identity and task join key, event ordering, and deduplication evidence. A task ID in an application API does not prove it is present in analytics. Missing keys or incomplete history make a metric partially observable or unavailable; do not invent joins or infer zero. A documented proxy can be reported separately without satisfying the original metric's decision threshold.
+
+For retention, specify calendar-day versus rolling-window calculation, source time zone, first-ever versus first-observed cohort entry, and data-lag handling. Include only cohorts whose observation window has ended. Separate return use, repeated value delivery, and subscription entitlement; an OR combining them obscures the business question. Record internal/test-traffic exclusions and identity limitations such as reinstalls or unlinked devices.
+
 ## Cross-platform attribution
 
 | Path | Observable portion | Basis for connecting steps | Missing portion | Supported conclusions |

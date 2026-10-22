@@ -24,7 +24,7 @@ Complete what can be verified first. If key facts are missing, the first action 
 | File or directory | Contents | Update when |
 | --- | --- | --- |
 | [AGENTS.md](AGENTS.md) | AI collaboration scope, evidence, and delivery rules | Collaboration constraints change |
-| [SETUP.md](SETUP.md) | Project setup and readiness status | First setup or key assumptions change |
+| [SETUP.md](SETUP.md) | Setup procedure and dated acceptance record; current readiness links to context | First setup or key assumptions change |
 | [template.json](template.json) | Template source and version | A template upgrade has been merged |
 | [context/current.md](context/current.md) | Compact current understanding and next-run handoff | After runs; consolidate at the agreed cadence |
 | [workflow/agent-loop.md](workflow/agent-loop.md) | Agent execution, writeback, and method improvement | The operating method changes |
@@ -36,15 +36,18 @@ Complete what can be verified first. If key facts are missing, the first action 
 | [scripts/requirements.txt](scripts/requirements.txt) | Optional authentication dependencies | Supported dependency versions change |
 | [scripts/credentials.md](scripts/credentials.md) | Credential acquisition, permissions, configuration and guided validation | Account setup or provider authorization steps change |
 | [scripts/sources.md](scripts/sources.md) | Official contracts, limits and live acceptance criteria | Provider behavior or validation changes |
-| [scripts/README.md](scripts/README.md) | Tool registry, availability, and adapter contract | Tools or access change |
+| [scripts/README.md](scripts/README.md) | Tool capabilities, prerequisites, and acceptance contract | Tools or their contracts change |
 | [context/project.md](context/project.md) | Project, resources, product sources, publication and content constraints | Capabilities, resources, markets, or sources change |
 | [context/strategy.md](context/strategy.md) | Audience, value proposition, business hypotheses, current goal, and change criteria | Strategic decisions change |
 | [context/baseline.md](context/baseline.md) | Dated data snapshots with scope and sources | New data becomes available; append a snapshot |
 | [workflow/README.md](workflow/README.md) | Task-based workflow index | Workflows are added or removed |
 | [workflow/cycle.md](workflow/cycle.md) | Hypothesis, execution, observation, review, and next decision | The method changes |
+| [workflow/problem-discovery.md](workflow/problem-discovery.md) | Bounded source research, evidence records, counterexamples, candidate tasks, and product validation | The discovery method changes |
 | [workflow/metrics.md](workflow/metrics.md) | Business metrics mapped to data sources | Definitions, collection, or validation status change |
-| [workflow/channels.md](workflow/channels.md) | Selected channels, execution steps, and paths into the product | Channel status, steps, or platform requirements change |
+| [workflow/channels.md](workflow/channels.md) | Selected acquisition channels and a separate project-specific research-source registry | Channel steps, source selection, or verification references change |
 | [output/README.md](output/README.md) | Storage rules for experiments, copy, reviews, and raw data | Delivery conventions change |
+
+Use the authority mappings in `context/project.md` for both reading and writing. When `strategy.md` or `baseline.md` indexes retained project documents, update those authorities and keep only links and brief summaries in the index. Live access, blockers, and next actions belong in `context/current.md`; setup and run records preserve dated outcomes.
 
 Product specifications, code, prices, and release status come from the sources listed in `context/project.md`. Record growth decisions here without creating a second product specification. Maintain published content only in its authoritative location.
 
@@ -53,6 +56,8 @@ Product specifications, code, prices, and release status come from the sources l
 Start from `context/current.md` and follow `workflow/agent-loop.md`. Run registered tools directly, record actual results, and leave a durable handoff. Improve workflow steps only when evidence supports the change. The included data CLI supports SEO/ASO retrieval, report import, and comparisons; consult the tool registry and verify configured project access before execution.
 
 Run only the investigations that available resources support. Each review should answer what is known, what remains unknown, and what is most useful to do next. Return use, revenue, and referrals can be observed in parallel; products need not follow one universal funnel.
+
+For community accounts, product reviews, or first-party feedback, use [problem discovery](workflow/problem-discovery.md). Start with a task, record what people tried and how it ended, and retain successful alternatives. Source categories are optional; configure actual audiences and platforms in the project. Save research in `output/research/` only when needed, or use its configured equivalent.
 
 Register new files in this table or the relevant workflow index. Maintain current rules in place. Append historical experiment results and retain the original hypothesis; do not present thresholds chosen afterward as decisions made in advance.
 

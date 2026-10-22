@@ -14,6 +14,8 @@ Before retrying interrupted work, inspect artifacts and external action receipts
 
 ## 2. Collect evidence through tools
 
+When the current question concerns user tasks or product-improvement signals, use [problem discovery](problem-discovery.md) and the selected source registry in [channels.md](channels.md). Define scope and limits before searching; preserve attempts, unresolved gaps, successful alternatives, and source coverage. Public research need not wait for analytics setup, and collecting evidence does not enable outreach or recurring jobs.
+
 Read the project tool registry in [scripts/README.md](../scripts/README.md). Execute registered scripts or connected tools for due, enabled sources using their configured inputs, credential references, source lag, and retry limits.
 
 - Record requested and actual coverage, filters, extraction time, and source identity.
@@ -45,11 +47,14 @@ Keep drafted, submitted, published, and verified-live states distinct. A complet
 | --- | --- | --- |
 | `context/baseline.md` | Dated evidence summaries and coverage limits | Previous snapshots and definitions |
 | `context/current.md` | Current understanding, active work, blockers, next due action | Evidence links and unresolved contradictions |
-| `context/strategy.md` | Supported findings; apply delegated decisions and mark other changes proposed | Established choices and decision history |
+| Authoritative strategy location from `context/project.md` (default: `context/strategy.md`) | Supported findings; apply delegated decisions and mark other changes proposed | Established choices and decision history |
 | `workflow/` | Evidence-backed improvements to execution | Active experiment thresholds and project constraints |
 | `output/experiments/` | Results, intervention dates, status, next review | Original hypotheses and thresholds, with later changes visible |
 | `output/runs/` | What this run did, learned, changed, and left pending | Traceable execution history |
+| Configured research location (default: `output/research/`) | Source ledger, search log, task clusters, and candidate revisions | Original evidence, access limits, and counterexamples |
 | Published-content location | Authorized and validated changes | One maintained version of published content |
+
+Resolve write targets from `context/project.md` before updating files. If a context file indexes an existing authoritative document, write decisions or evidence to that document and keep the index as a link and brief summary. Current access, blockers, and next actions belong in `context/current.md`; setup checks are dated acceptance records, and the tool registry describes capabilities and prerequisites. Do not maintain competing live-status tables.
 
 Finish the run record before linking it from current context. Mark interrupted work partial when possible; the next run reconciles artifacts and receipts before acting.
 
@@ -84,5 +89,7 @@ A run is complete when actual tool results and gaps are recorded, outputs reflec
 ## Scheduler handoff prompt
 
 > Run this project's growth operating loop using growth/AGENTS.md and growth/workflow/agent-loop.md. Resume from growth/context/current.md, execute registered tools for due sources, evaluate evidence, and advance authorized work. Save a run record, update context, and apply supported workflow improvements within the existing delegation. Preserve experiment history and record unavailable data honestly. Follow the configured notification policy and next-run conditions.
+
+When merging into an existing workspace, adapt this prompt to the actual operating-loop path and verify it from the project root. Check paths in prose, tables, and code blocks as well as Markdown links.
 
 This prompt is a handoff contract, not an installed automation. Configure a runner only when requested; record the actual job reference in project context.

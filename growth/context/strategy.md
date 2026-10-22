@@ -4,6 +4,8 @@ Updated: To fill in
 
 Current stage and supporting evidence: To confirm
 
+This file is the default strategy authority. When merging into an existing workspace with an authoritative strategy, register that location in `project.md` and turn this file into a concise index. Write decisions and thresholds to the registered authority, not to both files.
+
 ## Current goal
 
 - Business outcome to improve this cycle: To confirm.

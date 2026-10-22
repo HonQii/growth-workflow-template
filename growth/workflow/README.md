@@ -7,6 +7,7 @@
 | Execute or add an adapter | `../scripts/README.md` | Reproducible results with availability and coverage |
 | Set up a project | `../context/project.md` | Product fact sources, resources, and critical gaps |
 | Choose a goal and audience | `../context/strategy.md` | Testable hypotheses and selection rationale |
+| Discover user problems or investigate product-improvement signals | [Problem discovery](problem-discovery.md), [source selection](channels.md#problem-discovery-sources) | Traceable task evidence, counterexamples, and bounded validation candidates |
 | Assess data usability | [Metric definitions](metrics.md), `../context/baseline.md` | Definitions, validation status, and baseline |
 | Start or adjust a channel | [Channel workflows](channels.md) | Path into the product, steps, deliverables, and observations |
 | Plan and review a cycle | [Experiment cycle](cycle.md) | Experiment record, results, and next action |

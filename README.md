@@ -60,6 +60,7 @@ In a project using this template, you can ask an AI assistant to:
 
 - "Run the growth operating loop: collect due data with available tools, advance authorized work, update context, and record supported workflow improvements."
 - "Review this experiment. Separate observed facts, possible explanations, and missing evidence."
+- "Investigate one user task through relevant communities, product reviews, or our existing feedback. Use the problem-discovery workflow, set limits within our budget, retain counterexamples, and propose only evidence-backed next tests."
 - "Check whether this cycle's copy matches the product's actual capabilities and channel requirements."
 
 Setup is not required for every cycle. Update the relevant files when capabilities, resources, or business goals change. Revisit the relevant SETUP steps when key assumptions change substantially.
@@ -70,13 +71,21 @@ The source and version are recorded in [growth/template.json](growth/template.js
 
 Compare the original and target versions, then selectively merge workflow improvements. Do not overwrite `context/`, existing experiments, or published content. Review project customizations before updating its version record. When releasing the template, update the version and date and describe migration impacts in the release notes.
 
-The current content is a locally prepared `0.3.2`. The version file does not imply that a Git tag or GitHub Release has been created.
+The current content is a locally prepared `0.3.4`. The version file does not imply that a Git tag or GitHub Release has been created.
 
 For upgrades from 0.2.0, merge `growth/scripts/`, `growth/config.example.json`, and `growth/.gitignore`; preserve existing project configuration and context. New adapters are disabled by default. The initializer now excludes local runtime files when copying.
 
 For upgrades from 0.3.0, merge the updated CLI and authentication modules plus `growth/scripts/growth_data/environment.py` and `growth/.env.example`. Existing runner variables and JSON key identifiers remain supported; the optional project `.env` now loads automatically. Preserve existing `.env` and configuration files.
 
 For upgrades from 0.3.1, add `growth/scripts/credentials.md` and merge the setup/index links. This documentation update does not change credential loading or require regenerating existing keys.
+
+For upgrades from 0.3.2, merge the documentation rules for authoritative writeback, current-state ownership, evidence-gated planning, metric observability, historical issue revalidation, and concurrent-change records. Adapt prompt and example paths to the target layout and check an independent copy. Reconcile inherited rules rather than appending contradictory caveats. Keep project strategy, numeric thresholds, historical data, credentials, and scripts unchanged. This is a documentation update, not a data migration.
+
+### Upgrading from 0.3.3 to 0.3.4
+
+This documentation-only update adds [problem discovery](growth/workflow/problem-discovery.md): bounded source selection, traceable task evidence, deduplication, successful alternatives, and validation before treating a signal as a product opportunity. Merge the workflow and its links in the workspace and workflow indexes, agent rules, operating loop, cycle, setup, and output conventions. Add the research-source section of `growth/workflow/channels.md` alongside the project's existing channels.
+
+Keep project audiences, platform/community URLs, search seeds, domain constraints, budgets, permission decisions, current access status, and completed research in the consuming project. Reconcile the shared method with local customization rather than replacing files wholesale. Use the project's existing research and feedback authorities. No scripts, credentials, adapters, or copy behavior change; no collection or scheduled job is enabled by upgrading. Verify relative paths after an independent copy. Update a consuming project's version record only for the upgrade actually adopted.
 
 ## Maintenance and validation
 

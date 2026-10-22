@@ -1,6 +1,6 @@
 # Current operating context
 
-This is the concise handoff for the next agent run. Maintain present state in place and link to evidence. Product facts remain in `project.md`, strategic decisions in `strategy.md`, and snapshots in `baseline.md`.
+This is the concise handoff for the next agent run. Maintain present state in place and link to evidence. Product facts, strategy, and evidence follow the authoritative locations registered in `project.md`; `strategy.md` and `baseline.md` may be indexes. This file owns current access readiness, blockers, active work, and next actions; setup records and tool guides link here.
 
 Last updated: Not yet initialized
 
@@ -32,6 +32,7 @@ Reference the tool registry and baseline instead of duplicating commands or data
 
 - Latest run record: None yet.
 - Interrupted run or unresolved external action: None recorded; verify before retrying.
+- Runner status and job reference: Not configured; update only from actual setup or runtime evidence.
 - Next run's priority: To confirm.
 - Next context consolidation: To confirm from the operating agreement.
 - Workflow trial awaiting review: None recorded.

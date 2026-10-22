@@ -32,7 +32,7 @@ Keep unanswered critical inputs marked "To confirm." Silence does not authorize 
 
 ## 3. Establish the current strategy
 
-Document in [growth strategy](context/strategy.md):
+Register the authoritative strategy location in [project context](context/project.md). Use [growth strategy](context/strategy.md) as the default, or keep it as an index to an existing strategy when merging. Document at that authority:
 
 - The current goal and its basis.
 - The priority audience, demand trigger, and reason to choose the product.
@@ -42,6 +42,8 @@ Document in [growth strategy](context/strategy.md):
 Preserve established strategic choices. If evidence suggests a problem, propose a supported adjustment rather than silently changing positioning, pricing, or markets during setup.
 
 Without user data, the first cycle may investigate demand or observe product use. It need not start with articles or advertising.
+
+When direct evidence is limited, consider a bounded [problem-discovery run](workflow/problem-discovery.md). Select relevant source categories and record actual project sources in [channels](workflow/channels.md#problem-discovery-sources); do not enable all platforms or import another project's audience, findings, or numeric limits.
 
 ## 4. Make the goal observable
 
@@ -74,6 +76,8 @@ Initialize [current context](context/current.md) with the first plan, evidence r
 
 Keep a desired schedule separate from an installed job. Configure an external runner only when requested. If scheduling is blocked, record what is missing and do not claim the process is automated.
 
+Before completion, reconcile inherited calendar plans with evidence gates, verify consistent metric definitions and observable join keys, mark historical findings for revalidation, and record known concurrent changes in active experiments. Preserve original decisions and thresholds; unresolved conflicts belong in current context.
+
 ## 7. Check readiness
 
 - [ ] Project context cites real sources, with unknowns recorded separately.
@@ -88,7 +92,9 @@ Keep a desired schedule separate from an installed job. Configure an external ru
 
 - [ ] The operating agreement states what the agent can do and when a person must decide.
 - [ ] Tools have honest availability and validation status.
-- [ ] Current context allows a fresh agent to resume.
+- [ ] Current context allows a fresh agent to resume and owns live readiness, blockers, and next actions.
+- [ ] Authority and writeback mappings agree; indexes do not create second strategy or evidence records.
+- [ ] Relative links and paths in prompts, tables, and code examples resolve after an independent copy or directory merge.
 - [ ] Scheduling status reflects the actual runner, not just a planned cadence.
 
 Record the status below. Copying files alone does not complete business setup or imply publication or spending.
@@ -98,10 +104,10 @@ Record the status below. Copying files alone does not complete business setup or
 - Status: Not started / Preparing / Ready (choose one during setup)
 - Last verified: To fill in
 - First-cycle plan path: To fill in
-- Missing critical inputs and their impact: To fill in; explicitly state "None" if there are none
-- Next action: To fill in
-- Agent execution readiness: To confirm; distinguish executable work from pending access.
-- Scheduled execution: Not configured / Requested but blocked / Active / Paused (choose the actual state)
+- Acceptance record: Link to the dated setup run, including verified tools, missing inputs, and scheduling state at that time.
+- Current readiness, unresolved inputs, next action, and runner status: Maintain in [current context](context/current.md), not duplicated here.
+
+This section is setup acceptance as of the recorded date. Ready does not mean every source is connected or an experiment has succeeded; the run must state the accepted scope and limitations.
 
 ## Ready-to-use AI prompt
 

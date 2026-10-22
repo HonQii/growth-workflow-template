@@ -4,16 +4,16 @@ The agent runs these tools, checks evidence quality, and writes supported conclu
 
 ## Project tool registry
 
-| Tool / source | Status in this template | Command | Prerequisites | Evidence |
+| Tool / source | Implementation / acceptance boundary | Command | Prerequisites | Evidence |
 | --- | --- | --- | --- | --- |
-| Configuration / access | Implemented but unverified for the project | `python3 growth/scripts/data.py doctor all` | Local config; `--online` adds read-only access checks | JSON result; online success is narrower than data validation |
-| Search Console | Implemented but unverified for the project | `python3 growth/scripts/data.py fetch gsc --start DATE --end DATE` | Property read access and Google credentials | Daily query snapshots and normalized rows |
-| Apple Analytics | Implemented but unverified for the project | `python3 growth/scripts/data.py fetch apple --start DATE --end DATE` | Active ONGOING report request and Apple credentials | Standard daily discovery or downloads report, revised by event date |
-| Google Play | Implemented but unverified for the project | `python3 growth/scripts/data.py fetch play --start DATE --end DATE` | Private report bucket read access and Google credentials | Monthly Store Performance exports, filtered to event dates |
+| Configuration / access | Implemented; project acceptance tracked in current context | `python3 growth/scripts/data.py doctor all` | Local config; `--online` adds read-only access checks | JSON result; online success is narrower than data validation |
+| Search Console | Implemented; project acceptance tracked in current context | `python3 growth/scripts/data.py fetch gsc --start DATE --end DATE` | Property read access and Google credentials | Daily query snapshots and normalized rows |
+| Apple Analytics | Implemented; project acceptance tracked in current context | `python3 growth/scripts/data.py fetch apple --start DATE --end DATE` | Active ONGOING report request and Apple credentials | Standard daily discovery or downloads report, revised by event date |
+| Google Play | Implemented; project acceptance tracked in current context | `python3 growth/scripts/data.py fetch play --start DATE --end DATE` | Private report bucket read access and Google credentials | Monthly Store Performance exports, filtered to event dates |
 | Local report import | Implemented; offline fixtures validated | `python3 growth/scripts/data.py import apple|play ...` | Supported complete English report export | Same normalized schema and immutable snapshots |
 | Period comparison | Implemented; offline fixtures validated | `python3 growth/scripts/data.py compare --before MANIFEST --after MANIFEST` | Compatible snapshots with adequate coverage | Changes at each original dimension group |
 
-Replace project validation status only after checking real account data against the matching provider view or export. An offline fixture is not live-account verification. Source-level results remain independent in `fetch all`; a failed source cannot become an empty success.
+This registry describes adapter implementation and acceptance requirements. Maintain live project access and next actions in `context/current.md`; retain dated validation evidence in baselines and runs. Mark project access verified only after checking real account data against the matching provider view or export. An offline fixture is not live-account verification. Source-level results remain independent in `fetch all`; a failed source cannot become an empty success.
 
 ## Configure once per project
 
@@ -22,7 +22,7 @@ Start with [credential application and setup](credentials.md) when access is mis
 1. Copy [config.example.json](../config.example.json) to `growth/config.local.json` if it does not already exist. Fill the stable project ID and only relevant sources; set their `enabled` fields to `true`. Preserve existing configuration.
 2. Verify the exact Search Console property, Apple app ID, or Play package and report bucket. Verify each report's timezone against the project source; example timezones are starting values, not discovery of account settings. GSC dates use `America/Los_Angeles`.
 3. Copy [.env.example](../.env.example) to `growth/.env` if it does not exist. Fill only the required credential variables or external file paths. Existing runner/shell variables take precedence. Never put credentials in JSON configuration, CLI arguments, the run record, or Git; keep private-key and credential JSON files outside the repository.
-4. Run local `doctor`, then `doctor --online` when account access is available. Fetch a settled window and reconcile a small sample with the provider. Record source scope, date, manifest, discrepancies, and access status in this registry and `context/baseline.md`.
+4. Run local `doctor`, then `doctor --online` when account access is available. Fetch a settled window and reconcile a small sample with the provider. Record source scope, date, manifest, and discrepancies in the authoritative evidence record referenced by `context/baseline.md`; update live access readiness and next action only in `context/current.md`.
 
 Python 3.9+ is required. Import, comparison, local doctor, and supplied bearer-token authentication use the standard library. Google ADC and Apple team-key signing need the optional dependencies. If the project has no suitable Python environment, the agent can create one locally:
 
@@ -115,7 +115,7 @@ Network calls use HTTPS, 30-second request timeouts, at most two retries for tra
 
 ## Write evidence back into the workflow
 
-Follow [the agent loop](../workflow/agent-loop.md). Record the actual command, window, status, manifest paths and relevant caveats in `output/runs/`. Compare compatible snapshots, explain missing coverage, then update `context/baseline.md` and the compact `context/current.md` handoff. Change `workflow/` only when a run supplies evidence for the change. The CLI performs deterministic collection and arithmetic; the agent owns interpretation, context consolidation, and experiment decisions.
+Follow the operating loop linked from the [workspace rules](../AGENTS.md), using the project's actual workflow paths. Record the actual command, window, status, manifest paths and relevant caveats in `output/runs/`. Compare compatible snapshots, explain missing coverage, then update `context/baseline.md` and the compact `context/current.md` handoff. Change `workflow/` only when a run supplies evidence for the change. The CLI performs deterministic collection and arithmetic; the agent owns interpretation, context consolidation, and experiment decisions.
 
 These adapters cover owned-property performance. They do not supply competitor intelligence, market keyword volume, independent ASO keyword ranks, a technical SEO crawler, or user-level attribution across web and stores. Enable additional sources only for a concrete project question. No recurring job is installed by these scripts.
 

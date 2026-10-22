@@ -27,6 +27,8 @@ Use actual project paths or URLs. Explicitly note missing sources; do not assume
 | Subject | Authoritative source or location | Owner / verification method |
 | --- | --- | --- |
 | Product capabilities, limitations, and release status | To fill in | To fill in |
+| Growth strategy and decision log | `context/strategy.md` by default; retain an existing authoritative document when merging | To fill in |
+| Evidence records and indexes | `context/baseline.md` by default; name existing domain records when retained | To fill in |
 | Technical event definitions and data collection | To fill in | To fill in |
 | Payments, orders, or revenue records | To fill in / Not applicable | To fill in |
 | Channel, search, or store data | To fill in / Unavailable | To fill in |
@@ -43,12 +45,9 @@ Use actual project paths or URLs. Explicitly note missing sources; do not assume
 - Content languages and localization requirements: To confirm.
 - Publication channels, permissions, and authorized scope: To confirm.
 
-## Open questions
+## Current state ownership
 
-| Gap | Decision or action it blocks | How to resolve it | Current status |
-| --- | --- | --- | --- |
-
-Prioritize gaps that would change the current action. Noncritical unknowns do not block independent work.
+Maintain unresolved questions, access readiness, active work, and next actions in [current context](current.md). Keep stable configuration, authority mappings, permissions, and desired cadences here. Setup acceptance and verification results are dated records; they are not parallel live-status trackers. Prioritize gaps that would change the current action; noncritical unknowns do not block independent work.
 
 ## Agent operating agreement
 
@@ -65,7 +64,7 @@ Record the person's actual instructions and supporting decisions. Unknown values
 | Context consolidation cadence | To confirm | To add |
 | Workflow improvement review cadence | To confirm | To add |
 | Project time zone | To confirm; retain source time zones in evidence | To add |
-| Runner and schedule status | Not configured; record actual job reference after setup | To add |
+| Runner configuration | Record desired cadence and the job reference after authorized setup; live status belongs in `current.md` | To add |
 | Concurrency | One writer per project; record how the runner serializes jobs | To add |
 | Notification policy | Meaningful findings, completion, material failure, or required decisions; periodic summaries only if requested | To confirm |
 

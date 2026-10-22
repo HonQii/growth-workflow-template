@@ -6,10 +6,12 @@ Latest date covered by available data: To confirm
 
 See `project.md` for raw-data access and storage locations. Keep verifiable summaries, sources, and limitations here, not person-level raw data.
 
-## Data availability
+## Dated evidence coverage
 
-| Source | Questions it can answer | Coverage and delay | Access / collection status | Remaining gaps |
+| Source | Questions it can answer | Snapshot date, coverage and delay | Validation status at extraction | Limitations |
 | --- | --- | --- | --- | --- |
+
+Maintain live access and next collection actions in [current context](current.md). When this file indexes existing evidence records, append new evidence there and update only the reference here. Do not relabel an old snapshot as newly verified.
 
 Use these statuses: Not obtained, Obtained but unverified, Available, Partially available, Not applicable. Distinguish collection failures, lack of collection authorization, and true zero values.
 

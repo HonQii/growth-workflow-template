@@ -15,17 +15,23 @@ Read the strategy, baseline, and unfinished experiments. Distinguish:
 
 Choose a question that most affects the next investment and can yield information within budget. Observe multiple outcomes if useful, but keep the number of active changes interpretable.
 
+For information gaps or reported friction, [problem discovery](problem-discovery.md) provides a bounded way to examine original accounts and existing approaches. A research run can complete without validating a product opportunity or creating a new experiment for every post.
+
+Define entry conditions for the next action: usable evidence and a measurement contract before optimization, a verified effective date before observation, mature cohorts before retention review, and the original evidence thresholds before expansion. Calendar checkpoints trigger reviews, not mandatory changes or winners. Reconcile inherited weekly delivery plans with these conditions while preserving strategic thresholds and experiment history; stages need not form a universal linear funnel.
+
 ## 2. Record the experiment before execution
 
 Use the format below. Bug fixes, factual corrections, and routine maintenance need not be framed as A/B experiments, but record their timing and potential impact.
 
 Isolate variables where possible for causal comparisons. Without random assignment, document the comparison group, concurrent changes, and selection bias. A simple before-and-after comparison is not causal proof.
 
+At publication, record the baseline and effective date; results remain pending until the observation window has elapsed. If later changes overlap the same pages, audience, or product path, record their dates and affected scope in the active experiment. Explain whether the original effect can still be separated; otherwise report the combined change descriptively, without attributing it to one variable.
+
 ## 3. Execute and observe
 
 Complete deliverables using project and channel validation procedures. Record when changes actually go live or take effect. Drafted, submitted for review, and live are distinct states.
 
-Set the observation period and time and spending limits at the start. If data is insufficient, extend, change methods, or stop. Reassess when resource limits are reached rather than waiting indefinitely for a sample.
+Set the observation period and time and spending limits at the start. If data is insufficient, extend, change methods, or stop. Reassess when resource limits are reached rather than waiting indefinitely for a sample. Every extension needs a new review date or trigger and a time or resource ceiling; it does not erase the original deadline or justify changing success thresholds.
 
 ## 4. Review and decide
 
@@ -40,7 +46,7 @@ Update changed strategy, baselines, or channel statuses while retaining the orig
 
 ## Experiment record format
 
-Save records in `output/experiments/`. Create the directory as needed. See `../output/README.md` for naming and status conventions.
+Save records in `growth/output/experiments/` from the project root, or its configured equivalent. Create the directory as needed. See [output/README.md](../output/README.md) for naming and status conventions.
 
 ```text
 Experiment ID and title:

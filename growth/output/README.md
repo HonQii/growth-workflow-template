@@ -6,6 +6,7 @@ Create subdirectories only when needed:
 | --- | --- |
 | `experiments/` | Plans, execution changes, and reviews for each experiment; use the format in `../workflow/cycle.md` |
 | `runs/` | Agent executions: tool outcomes, decisions, context updates, and workflow changes |
+| `research/` | Dated source ledgers, search logs, task evidence, counterexamples, and candidate revisions; use `../workflow/problem-discovery.md` |
 | `content/<channel>/` | Unpublished copy, asset descriptions, and publication records |
 
 Use a stable identifier and short topic for experiment filenames, such as `exp-001-onboarding.md`. Record dates inside the file. When a release has its own lifecycle, follow the project's version naming convention.
@@ -16,6 +17,12 @@ Register new experiments here and update their status when it changes. Do not pr
 
 | Experiment | Status | Main question | Next review date or trigger |
 | --- | --- | --- | --- |
+
+## Problem-discovery research
+
+Use a unique descriptive name such as `research/problem-signals-YYYYMMDD-topic.md`, or the project's existing research convention. Keep one investigation's scope, actual queries and coverage, deidentified evidence records, duplicate handling, failed reads, supporting and contradicting cases, candidate tasks, and next decision together. Link to the relevant experiment and run rather than copying their full history.
+
+Retain original URLs or authorized internal references, dates with provenance, and reading completeness. Distinguish source observations from interpretation and untested product fit. Store no identifiable personal raw data here. Use the project's existing feedback system for feedback records; research notes only summarize and reference it. Add new research notes to the project's output index when created; the template contains no completed studies.
 
 ## Copy or asset records
 
@@ -33,7 +40,7 @@ Read language, review, and validation requirements from `../context/project.md`.
 
 - Maintain published content in the project's designated authoritative location. Keep publication records or clearly labeled historical snapshots here, not a second maintained copy.
 - When copy is replaced, note the new location. Preserve each experiment's original hypothesis, thresholds, and later adjustments.
-- Summarize findings in `../context/baseline.md` or `../context/strategy.md` and link to the experiment rather than duplicating numbers across files.
+- Summarize findings at the evidence or strategy authority registered in `../context/project.md`; update `baseline.md` / `strategy.md` as indexes when applicable. Link to the experiment rather than duplicating numbers or decisions across files.
 - Follow the project's storage and access rules for raw exports. Keep secrets and person-level data out of these records. Configure ignore and cleanup rules before adding a local export directory.
 
 ## Agent run records

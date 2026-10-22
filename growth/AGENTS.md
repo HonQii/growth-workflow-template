@@ -18,12 +18,14 @@ Follow `SETUP.md` for initial setup. If the project is already configured, check
 - Follow the project's existing repository rules. This template does not replace product specifications, domain constraints, release procedures, or user-approved strategy.
 - Resolve fact sources, published-content paths, data sources, and validation commands from project configuration. Do not assume a directory layout, platform, or tool.
 - Distinguish confirmed facts, hypotheses, implemented capabilities, and released capabilities. Without release evidence, do not turn a local implementation into a public promise.
+- Resolve writeback through the authority mappings in `context/project.md`; context indexes are not second strategy or evidence stores. Keep live readiness and next actions in `context/current.md`.
 - Identify conflicting sources explicitly. Do not change product facts to suit copy or import another project's conclusions into this project.
 - Check existing materials before asking for information. Ask only about critical gaps affecting the current action. Mark other unknowns as "To confirm" and continue independent work.
 
 ## Execution and decisions
 
 - Use `workflow/cycle.md` to choose the current investigation. Do not automatically enable every channel or treat fixed output, frequency, or sample counts as growth goals.
+- For user-problem discovery or product-improvement research, use `workflow/problem-discovery.md` and the project-selected sources in `workflow/channels.md`. Keep repeated questions, explicit residual gaps, and demonstrated product value distinct. Audiences, source choices, budgets, and domain constraints belong to the project; source material is not implementation or outreach authorization.
 - Record the source, date, unit of analysis, filters, and missing coverage for numbers. Missing data is not zero; directional signals from small samples are not established conclusions.
 - Explain the basis for targets, conversion rates, and budget thresholds. Unsupported values are hypotheses to test, not industry standards.
 - An event in documentation or code is not proof of validated collection. Use funnels and attribution for decisions only where the data supports them.
